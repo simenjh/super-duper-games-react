@@ -7,30 +7,29 @@ import img1 from "../../../assets/images/featured-images/big_gainer.jpg";
 
 export class FeaturedGames extends Component {
   createImageComponents(){
-    let images = []
-    for (let i=0; i<6; i++){
-      images.push(<ImageComponent image={{ src: img1 }} />);
-    }
-    return images;
+      let images = []
+      this.props.images.forEach((image, index) => {
+        images.push(<ImageComponent image={{ src: image.url, width: "200px" }} />);
+      });
+      return images;
   }
 
-  wrap_images(images){
-    const size = 3;
-    const grouped_images = _.chunk(images, size);
-    const wrapped_images = grouped_images.map((e) => {
-      return <div className="featured-games-row">{e}</div>
-    });
-    return wrapped_images;
-  }
+    wrapImages(images){
+        const size = 3;
+        const grouped_images = _.chunk(images, size);
+        const wrapped_images = grouped_images.map((e) => {
+          return <div className="featured-games-row">{e}</div>
+        });
+        return wrapped_images;
+    }
 
   render(){
-    const images = this.createImageComponents();
-    const wrapped_images = this.wrap_images(images);
-
+    const imageComponents = this.createImageComponents();
+    const wrappedImages = this.wrapImages(imageComponents);
     return (
-      <div className="featured-games-section">
-        {wrapped_images}
-      </div>
+          <div className="featured-games-section">
+              {wrappedImages}
+          </div>
     );
   }
 }
