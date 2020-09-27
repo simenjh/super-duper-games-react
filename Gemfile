@@ -56,5 +56,4 @@ gem "react_on_rails", "~> 12.0"
 
 gem 'mini_racer', platforms: :ruby
 
-gem 'bootstrap', '~> 5.0.0.alpha1'
-gem 'jquery-rails'
+gem 'bcrypt'

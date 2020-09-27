@@ -1,1 +1,42 @@
-<%= react_component("NavBar", prerender: false) %>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <a class="navbar-brand" href="/">
+    <%= image_tag("crash_bandicoot_2.png", style: "width:80px") %>
+    Super Duper Games
+  </a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto" style="padding-right:100px">
+      <li class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/" class="nav-link">Games</a>
+      </li>
+      <li class="nav-item">
+        <a href="/" class="nav-link">Something</a>
+      </li>
+      <% if logged_in? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.username %></a>
+          <div class="dropdown-menu" aria-labelledby="dropdown04">
+            <%= link_to "Profile", current_user, class: "dropdown-item" %>
+            <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Signup", new_user_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Log in", login_path, class: "nav-link" %>
+        </li>
+    <% end %>
+    </ul>
+  </div>
+</nav>

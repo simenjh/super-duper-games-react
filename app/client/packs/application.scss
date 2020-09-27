@@ -11,7 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  */
- @import "bootstrap";
- @import "./games.scss";
- @import "./home.scss";
- @import "./general.scss";
+ // @import "bootstrap";
+ @import "bootstrap/scss/bootstrap";
+ @import "../stylesheets/games.scss";
+ @import "../stylesheets/home.scss";
+ @import "../stylesheets/general.scss";

@@ -5,21 +5,10 @@ class HelloWorldController < ApplicationController
   layout "application"
 
   def index
-    @games = Game.with_attached_images
-    # @images_urls = []
-    # @images.each { |e| url_for(e) }
-    # @image_urls = @images.map { |image| url_for(image) }
-
-    # @images = {}
-
+    @games = Game.with_attached_list_image
     @images = @games.map do |game|
-      { game_id: game.id, url: url_for(game.images.first) }
-    end
-
-    # @games.each_with_index do |game, index|
-    #   @images["game_#{index}"] = { game_id: game.id, url: url_for(game.images.first) }
-    #   puts index
-    # end
+      { game_id: game.id, url: url_for(game.list_image) }
+  end
 
   end
 

@@ -1,15 +1,18 @@
 import React, { Component } from "react";
-import { ImageComponent } from "./image_component";
+import { ImageComponent } from "../home/image_component";
 const _ = require("lodash");
-import img1 from "../../../assets/images/featured-images/big_gainer.jpg";
 
 
 
-export class FeaturedGames extends Component {
+export class GamesList extends Component {
   createImageComponents(){
       let images = []
-      this.props.images.forEach((image, index) => {
-        images.push(<ImageComponent image={{ src: image.url, width: "200px" }} />);
+      this.props.images.forEach((image) => {
+        images.push(
+                  <a href={"/games/" + image.game_id}>
+                    <ImageComponent image={{ src: image.url, width: "200px" }} />
+                  </a>
+        );
       });
       return images;
   }
