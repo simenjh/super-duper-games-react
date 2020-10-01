@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <a class="navbar-brand" href="/">
-    <%= image_tag("crash_bandicoot_2.png", style: "width:80px") %>
+    <%= image_pack_tag("crash_bandicoot_2.png", style: "width:80px") %>
     Super Duper Games
   </a>
 
@@ -11,16 +11,12 @@
 
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto" style="padding-right:100px">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a href="/" class="nav-link">Home</a>
+        <%= link_to "Games", games_path, class: "nav-link" %>
       </li>
-      <li class="nav-item">
-        <a href="/" class="nav-link">Games</a>
-      </li>
-      <li class="nav-item">
-        <a href="/" class="nav-link">Something</a>
-      </li>
+    </ul>
+    <ul class="navbar-nav" style="padding-right:100px">
       <% if logged_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_user.username %></a>

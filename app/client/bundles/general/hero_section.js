@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import sw from "../../../assets/images/sw_vader.jpg";
+import sw from "../../images/sw_vader.jpg";
 
 
 export class HeroSection extends Component {

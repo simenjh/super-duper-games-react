@@ -1,3 +1,55 @@
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body {
-    height:100%;
-} 
+  height: 100%;
+}
+
+html {
+  position: relative;
+  overflow-y: scroll;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+.container {
+  flex: 1 0 auto;
+}
+
+#content-container {
+  padding-top: 30px;
+}
+
+.outer-flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+// Adjustments for smaller screens
+@media only screen and (max-width: 700px) {
+  .inner-container {
+    width: 100%;
+  }
+}
+
+// Adjustments for larger screens
+@media only screen and (min-width: 650px) {
+  .inner-container {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+
+
+.submit-button {
+  margin-top: 10px;
+}

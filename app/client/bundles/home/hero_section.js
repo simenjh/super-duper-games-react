@@ -1,6 +1,8 @@
+// Not used anymore
+
 import React, { Component } from "react";
-import img1 from "../../../assets/images/sw_vader.jpg";
-import img2 from "../../../assets/images/rayman.jpg";
+import img1 from "../../images/sw_vader.jpg";
+import img2 from "../../images/rayman.jpg";
 
 
 

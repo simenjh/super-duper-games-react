@@ -1,4 +1,6 @@
 class Game < ApplicationRecord
+  has_many :playthroughs
+  
   has_one_attached :list_image
   has_one_attached :hero_image
 

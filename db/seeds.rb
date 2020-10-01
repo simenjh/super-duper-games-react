@@ -13,13 +13,13 @@ ratchet = Game.create(
 )
 
 ratchet.list_image.attach(
-  io: File.open('/home/simen/programming/ruby/react-rails-test/app/assets/images/featured-images/clank.jpg'),
+  io: File.open('/home/simen/programming/ruby/react-rails-test/app/client/images/featured-images/clank.jpg'),
   filename: 'clank.jpg',
   content_type: 'application/jpg'
 )
 
 ratchet.hero_image.attach(
-  io: File.open('/home/simen/programming/ruby/react-rails-test/app/assets/images/ratchet_hero.jpg'),
+  io: File.open('/home/simen/programming/ruby/react-rails-test/app/client/images/ratchet_hero.jpg'),
   filename: 'ratchet_hero.jpg',
   content_type: 'application/jpg'
 )
@@ -33,13 +33,13 @@ rayman = Game.create(
 )
 
 rayman.list_image.attach(
-  io: File.open('/home/simen/programming/ruby/react-rails-test/app/assets/images/featured-images/rayman.png'),
+  io: File.open('/home/simen/programming/ruby/react-rails-test/app/client/images/featured-images/rayman.png'),
   filename: 'rayman.jpg',
   content_type: 'application/png'
 )
 
 rayman.hero_image.attach(
-  io: File.open('/home/simen/programming/ruby/react-rails-test/app/assets/images/rayman.jpg'),
+  io: File.open('/home/simen/programming/ruby/react-rails-test/app/client/images/rayman.jpg'),
   filename: 'rayman.jpg',
   content_type: 'application/jpg'
 )
@@ -52,7 +52,7 @@ gta = Game.create(
 )
 
 gta.list_image.attach(
-  io: File.open('/home/simen/programming/ruby/react-rails-test/app/assets/images/featured-images/gta_san_andreas.jpg'),
+  io: File.open('/home/simen/programming/ruby/react-rails-test/app/client/images/featured-images/gta_san_andreas.jpg'),
   filename: 'gta_san_andreas.jpg',
   content_type: 'application/jpg'
 )
@@ -65,7 +65,7 @@ fifa = Game.create(
 )
 
 fifa.list_image.attach(
-  io: File.open('/home/simen/programming/ruby/react-rails-test/app/assets/images/featured-images/fifa.jpg'),
+  io: File.open('/home/simen/programming/ruby/react-rails-test/app/client/images/featured-images/fifa.jpg'),
   filename: 'fifa.jpg',
   content_type: 'application/jpg'
 )
@@ -78,7 +78,7 @@ big_mutha = Game.create(
 )
 
 big_mutha.list_image.attach(
-  io: File.open('/home/simen/programming/ruby/react-rails-test/app/assets/images/featured-images/big_mutha_truckers.jpeg'),
+  io: File.open('/home/simen/programming/ruby/react-rails-test/app/client/images/featured-images/big_mutha_truckers.jpeg'),
   filename: 'big_mutha_truckers.jpeg',
   content_type: 'application/jpeg'
 )

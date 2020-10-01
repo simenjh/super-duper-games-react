@@ -7,13 +7,18 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'hello-world-bundle' %>
+    <%= javascript_pack_tag 'register_components' %>
   </head>
 
   <body>
     <header>
       <%= render "layouts/header" %>
     </header>
-    <%= yield %>
+
+    <% flash.each do |msg_type, msg| %>
+     <div class="alert alert-<%= msg_type %>"><%= msg %></div>
+    <% end %>
+
+    <%= content_for?(:special_content) ? render("layouts/special_content") : yield %>
   </body>
 </html>

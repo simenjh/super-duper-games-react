@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users
   resources :games, only: [:show, :index]
 
-  root to: 'hello_world#index'
+  root to: 'hello_world#home'
 
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"

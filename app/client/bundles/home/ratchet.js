@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ratchet from "../../../assets/images/ratchet.png";
+import ratchet from "../../images/ratchet.png";
 
 
 export class RatchetSection extends Component {
