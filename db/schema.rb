@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_29_090650) do
+ActiveRecord::Schema.define(version: 2020_10_02_091801) do
 
   create_table "achievements", force: :cascade do |t|
     t.string "name"
@@ -48,10 +48,10 @@ ActiveRecord::Schema.define(version: 2020_09_29_090650) do
 
   create_table "games", force: :cascade do |t|
     t.string "name"
-    t.string "hero_headline"
     t.string "hero_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
   end
 
   create_table "playthroughs", force: :cascade do |t|

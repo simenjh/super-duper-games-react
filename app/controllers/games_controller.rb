@@ -1,7 +1,10 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, only: [:show, :edit, :update, :destroy, :create_playthrough]
+  before_action :login_to_play_game, only: [:create_playthrough]
+
 
   def show
+    @image_url = url_for(@game.mascot_image)
   end
 
 
@@ -17,7 +20,7 @@ class GamesController < ApplicationController
     random_score = Random.rand(1001)
     game_id = @game.id
 
-    @playthrough = Playthrough.new(score: random_score, user_id: current_user.id, game_id: game_id)
+    playthrough = Playthrough.new(score: random_score, user_id: current_user.id, game_id: game_id)
 
     if playthrough.save
       current_user.update_attribute(:score, current_user.score + random_score)
@@ -33,9 +36,17 @@ class GamesController < ApplicationController
 
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_game
       @game = Game.find(params[:id])
+    end
+
+
+    def login_to_play_game
+      unless logged_in?
+        flash[:danger] = "Please login to play the game!"
+        redirect_to games_path
+      end
     end
 
 

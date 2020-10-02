@@ -5,3 +5,55 @@
 .game-thumbnail-container {
   margin: 0 40px;
 }
+
+
+.featured-games-section {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.featured-games-row {
+  margin-bottom: 20px;
+}
+
+.h1-games-list {
+  text-align: center;
+}
+
+.all-games-section {
+  margin-top: 20px;
+}
+
+
+
+
+.game-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 100px 0;
+}
+
+.game-mascot-image {
+  width: 400px;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+// Achievements
+#achievements-ul {
+  list-style: none;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.achievement-li {
+  margin-bottom: 50px;
+}
+
+.achievement-image {
+  width: 20%;
+}

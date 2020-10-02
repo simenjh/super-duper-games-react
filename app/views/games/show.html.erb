@@ -1,3 +1,14 @@
 
-
 <%= react_component("HeroSection", props: { game: @game, hero_url: url_for(@game.hero_image) }, prerender: false) %>
+
+<div class="game-section">
+  <img class="game-mascot-image" src=<%= @image_url %> />
+  <div class="ratchet-text-section">
+    <p><%= @game.description %></p>
+    <div id="ratchet-button-container">
+      <%= button_to "Play #{@game.name}", game_create_playthrough_path, params: { id: @game.id }, class: "btn btn-primary" %>
+      <br />
+      <%= link_to 'Back to games', games_path %>
+    </div>
+  </div>
+</div>

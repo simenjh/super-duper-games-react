@@ -7,7 +7,7 @@ export class HeroSection extends Component {
     return (
       <div className="hero-image" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(${this.props.hero_url})`}}>
         <div className="hero-text">
-          <h1>{this.props.game.hero_headline}</h1>
+          <h1>{this.props.game.name}</h1>
           <p>{this.props.game.hero_description}</p>
         </div>
       </div>
@@ -18,7 +18,7 @@ export class HeroSection extends Component {
 
 HeroSection.defaultProps = {
   game: {
-    hero_headline: "Where Addiction Starts",
+    name: "Addiction Starts Now",
     hero_description: "Start your gaming addiction today!"
   },
   hero_url: sw
