@@ -23,6 +23,9 @@
 
 ## Seed the database
       rails db:seed
+      
+## Launch the app
+      rails server
 
 #### Point your browser to: [http://localhost:3000](http://localhost:3000)
 
