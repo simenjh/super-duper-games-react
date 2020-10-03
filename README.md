@@ -1,24 +1,29 @@
-# README
+# Super Duper Games with React
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+* Ruby 2.6.3
+* Rails 5.2.4
+* Node 14.10.1
+* Yarn 1.22.5
 
-Things you may want to cover:
+## Install gems
+   bundle
 
-* Ruby version
+## Install Active Storage
+   rails active_storage:install
 
-* System dependencies
+## Install react_on_rails
+   rails generate react_on_rails:install
 
-* Configuration
+## Install npm packages
+   yarn
 
-* Database creation
+## Run migrations to setup the database schema 
+   rails db:migrate
 
-* Database initialization
+## Seed the database
+   rails db:seed
 
-* How to run the test suite
+#### Point your browser to: [http://localhost:3000](http://localhost:3000)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
