@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   resources :users
   resources :games, only: [:show, :index]
 
-  root to: 'hello_world#home'
+  root to: 'super_duper#home'
 
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
-  post "game/create_playthrough", to: "games#create_playthrough" 
+  post "game/create_playthrough", to: "games#create_playthrough"
 
 end

@@ -15,7 +15,7 @@ export class RatchetSection extends Component {
           which were developed by High Impact Games for the PlayStation Portable.
           </p>
           <div id="ratchet-button-container">
-            <button className="btn btn-primary">Play Ratchet & Clank</button>
+            <a className="btn btn-primary" href={"/games/" + this.props.id}>Explore Ratchet & Clank</a>
           </div>
         </div>
       </div>

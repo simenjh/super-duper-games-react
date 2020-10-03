@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ImageComponent } from "../home/image_component";
+import { ImageComponent } from "../general/image_component";
 const _ = require("lodash");
 
 
