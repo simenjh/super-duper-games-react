@@ -7,22 +7,22 @@
 * Yarn 1.22.5
 
 ## Install gems
-   bundle
+      bundle
 
 ## Install Active Storage
-   rails active_storage:install
+      rails active_storage:install
 
 ## Install react_on_rails
-   rails generate react_on_rails:install
+      rails generate react_on_rails:install
 
 ## Install npm packages
-   yarn
+      yarn
 
 ## Run migrations to setup the database schema 
-   rails db:migrate
+      rails db:migrate
 
 ## Seed the database
-   rails db:seed
+      rails db:seed
 
 #### Point your browser to: [http://localhost:3000](http://localhost:3000)
 
