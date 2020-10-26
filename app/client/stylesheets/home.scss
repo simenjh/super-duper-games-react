@@ -1,4 +1,21 @@
+@media (max-width: 419px) {
+  .ratchet-section {
+    flex-direction: column;
+    h1 {
+      text-align: center;
+    }
+  }
+}
 
+@media (min-width: 420px) {
+  .ratchet-section {
+    flex-direction: row;
+    .ratchet-text-section {
+      width: 500px;
+      margin-left: 100px;
+    }
+  }
+}
 
 
 /* The hero image */
@@ -49,10 +66,7 @@
   flex-direction: column;
   justify-content: center;
 
-  width: 500px;
   text-align: left;
-  // margin-top: 50px;
-  margin-left: 100px;
 }
 
 

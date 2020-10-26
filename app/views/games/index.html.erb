@@ -1,4 +1,4 @@
 <div class="all-games-section">
   <h1 class="h1-games-list">All Games</h1>
-  <%= react_component("GamesList", props: { images: @images}, prerender: false) %>
+  <%= react_component("GamesList", props: { images: @images, n_images_in_row: 3 }, prerender: false) %>
 </div>
